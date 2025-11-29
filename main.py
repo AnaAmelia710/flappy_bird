@@ -2,6 +2,7 @@ import pygame
 #from scripts.jogador import Jogador
 #from scripts.cano import Cano
 from scripts.cenas import Partida
+from scripts.cenas import Menu
 
 pygame.init()
 tamanhoTela = [600, 400]
@@ -13,8 +14,9 @@ corFundo = (86, 200, 214)
 #cano = Cano(tela)
 listaCenas = {
     'partida':Partida(tela),
+    'menu': Menu(tela)
 }
-cenaAtual = 'partida'
+cenaAtual = 'menu'
 while True:
     for e in pygame.event.get():
         if e.type == pygame.QUIT:
